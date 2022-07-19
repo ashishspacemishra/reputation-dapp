@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { MoralisProvider } from "react-moralis";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <MoralisProvider serverUrl="https://afijh5cjipft.usemoralis.com:2053/server" appId="RRwmAS2YoX9dJOqaUjaSnh34ncw1E0nhEn4KSyh4">
+      <Router>
+          <div>
+              <Routes>
+                  <Route exact path="/" element={<App page={"HOME"} />} />
+                  <Route path="/userInfo" element={<App page={"PROPOSAL"} />} />
+                  <Route path="/userDetail" element={<App page={"TREASURY"}  />} />
+                  {/*<Route path="/create-dao" element={<CreateDAO />} />*/}
+              </Routes>
+          </div>
+      </Router>
+      </MoralisProvider>
   </React.StrictMode>
 );
 

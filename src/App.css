@@ -36,3 +36,169 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App-login {
+  position: absolute;
+  right: 7.5%;
+  top: 2%;
+  height: 40px;
+  width: 115px;
+  background: #FFFFFF;
+  border-width: 0px;
+}
+
+.App-logout {
+  position: absolute;
+  right: 6.5%;
+  top: 4%;
+  height: 40px;
+  width: 115px;
+  background: #FFFFFF;
+  box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
+  border-radius: 5px;
+  border-width: 0px;
+  border-color: #C94B32;
+  align-content: inherit;
+  color: #C94B32;
+}
+
+.accountInfo {
+  position: absolute;
+  right: 16%;
+  top: 4%;
+  width: 120px;
+  height: 30px;
+  align-content: center;
+  background: #FFFFFF;
+  /* Color-drop */
+  align-items: center;
+  text-align: center;
+  box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
+  border-radius: 30px;
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 5px 5px 5px 25px;
+  display: flex;
+  letter-spacing: -0.011em;
+  color: #919191;
+}
+
+.sidebarCN {
+  position: absolute;
+  width: 120px;
+  height: 739px;
+  box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
+  border-radius: 5px;
+}
+
+.sidebarImage {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.projectHeaderCN {
+  width: 1127px;
+  height: 116px;
+  box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
+  border-radius: 5px;
+  margin-left: 150px;
+  display: flex;
+  /*padding-top: 100px;*/
+}
+
+.projectHeader {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  padding-top: 35px;
+  padding-left: 10px;
+  padding-right: 460px;
+  color: #3A3C40;
+}
+
+.projectInfoCN {
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 150px;
+}
+
+.projectInfoBox {
+  width: 520px;
+  height: 120px;
+  box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
+  border-radius: 5px;
+}
+
+.projectGovText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  padding-left: 150px;
+  padding-top: 30px;
+  color: #121212;
+}
+
+.achievements {
+  width: 358px;
+  height: 257px;
+  box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
+  border-radius: 5px;
+  margin-left: 35px;
+}
+
+.points {
+  width: 725px;
+  height: 257px;
+  box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
+  border-radius: 5px;
+}
+
+.pointsText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  color: #3A3C40;
+}
+
+.pointsSText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: left;
+  color: #3A3C40;
+
+}
+
+.pointsButtons {
+  height: 59px;
+  background: #D26F38;
+  color: #FFFFFF;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.pointsStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /*align-items: center;*/
+  padding: 11.5px 20px;
+  gap: 10px;
+}
