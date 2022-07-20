@@ -14,9 +14,7 @@ root.render(
           <div>
               <Routes>
                   <Route exact path="/" element={<App page={"HOME"} />} />
-                  <Route path="/userInfo" element={<App page={"PROPOSAL"} />} />
-                  <Route path="/userDetail" element={<App page={"TREASURY"}  />} />
-                  {/*<Route path="/create-dao" element={<CreateDAO />} />*/}
+                  <Route path="/userDetail" element={<App page={"USER_DETAIL"}  />} />
               </Routes>
           </div>
       </Router>

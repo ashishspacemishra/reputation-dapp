@@ -5,6 +5,7 @@ import Sidebar from "./component/Sidebar";
 import ProjectHeader from "./component/ProjectHeader";
 import ProjectInfo from "./component/ProjectInfo";
 import ProjectGov from "./component/ProjectGov";
+import UserProfile from "./component/UserProfile";
 
 class App extends Component {
 
@@ -51,22 +52,51 @@ class App extends Component {
         }
     }
 
+    renderPage = (props) => {
+        if (props.page === "HOME") {
+            return (
+                <div>
+                    <Sidebar/>
+                    <div style={{paddingTop:100}}>
+                        <ProjectHeader />
+                    </div>
+                    <ProjectInfo />
+                    <ProjectGov />
+                </div>
+            );
+        } else if (props.page === "USER_DETAIL") {
+            return (
+                <div>
+                    <Sidebar/>
+                    <div style={{paddingTop:100}}>
+                        <ProjectHeader />
+                    </div>
+                    <UserProfile />
+                </div>
+            );
+        }
+        return (
+            <div></div>
+        );
+    }
+
     render() {
       return (
         <div className="App">
           <LoginBar isUserLoggedIn={this.state.isUserLoggedIn} displayAddress={this.getDisplayAddress(this.state.accountAddress)}
                     onLoginButtonClick={this.LoginMetamask} onLogoutButtonClick={this.LogoutMetamask}
           />
-            { this.state.isUserLoggedIn &&
-              <div>
-                <Sidebar/>
-                <div style={{paddingTop:100}}>
-                    <ProjectHeader />
-                </div>
-                <ProjectInfo />
-                <ProjectGov />
-              </div>
-            }
+            {/*{ this.state.isUserLoggedIn &&*/}
+            {/*  <div>*/}
+            {/*    <Sidebar/>*/}
+            {/*    <div style={{paddingTop:100}}>*/}
+            {/*        <ProjectHeader />*/}
+            {/*    </div>*/}
+            {/*    <ProjectInfo />*/}
+            {/*    <ProjectGov />*/}
+            {/*  </div>*/}
+            {/*}*/}
+            {this.state.isUserLoggedIn && this.renderPage(this.props)}
         </div>
       );
     }
