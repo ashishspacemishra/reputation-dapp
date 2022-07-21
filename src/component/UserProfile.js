@@ -1,10 +1,9 @@
-import userProfile from "../assets/userProfile.svg";
-import teamNo from "../assets/teamNo.svg";
-import serviceNo from "../assets/serviceNo.svg";
+import teamIcon from "../assets/teamIcon.svg";
+import serviceIcon from "../assets/serviceIcon.svg";
 import monthlyStrength from "../assets/monthlyStrength.svg";
 import ongoingTasks from "../assets/ongoingTasks.svg";
 import progress from "../assets/progress.svg";
-import Vector from "../assets/Vector.svg";
+import profileImage1 from "../assets/profileImage1.svg";
 import line from "../assets/line.svg";
 import myActivity from "../assets/myActivity.svg";
 import level1Image from "../assets/level1Image.svg";
@@ -21,11 +20,22 @@ const UserProfile = () => {
             <div className={"userInfoBox"} style={{marginRight:40}}>
                 <div className={"yourProfile"}>Your Profile</div>
                 <div>
-                    <img src={userProfile} style={{padding:35}}/>
+                    <img src={profileImage1} style={{paddingBottom:5, paddingTop:30}}/>
                 </div>
-                <div>
-                    <img src={teamNo} style={{padding:20}}/>
-                    <img src={serviceNo} style={{padding:20}}/>
+                <div className={"infoText4"}>
+                    Selena
+                </div>
+                <div style={{display:"flex", justifyContent:"center"}}>
+                    <img src={teamIcon} style={{padding:10}}/>
+                    <div style={{paddingRight:30, paddingTop:13}}>
+                        <div className={"infoText6"}>2</div>
+                        <div className={"infoText5"}>Teams</div>
+                    </div>
+                    <img src={serviceIcon} style={{padding:10}}/>
+                    <div style={{paddingTop:13, justifyContent:"left", alignItems:"flex-start"}}>
+                        <div className={"infoText6"} style={{opacity: 0.5}}>5</div>
+                        <div className={"infoText5"}>Services</div>
+                    </div>
                 </div>
             </div>
         );
@@ -122,15 +132,20 @@ const UserProfile = () => {
                     </div>
                     <div className={"unlockBlock"}>
                         <button className={"pointsButtons"} style={{width:120, height:40}}>Staking</button>
-                        <div className={"infoText1"}>Strength points earned last month</div>
-                        <div className={"infoText2"}>25</div>
+                        <div className={"infoText3"}>+ 12 SP the 21/10/22</div>
+                        <button className={"blueButton"} style={{width:60, height:40}}>Stake</button>
                     </div>
                     <div className={"unlockBlock"}>
-                        <div style={{paddingTop:20}}>
-                            <img src={ongoingTasks} />
-                        </div>
-                        <div className={"infoText1"}>Ongoing tasks</div>
-                        <div className={"infoText2"}>17</div>
+                        <button className={"pointsButtons"} style={{width:120, height:40}}>Achievements</button>
+                        <div className={"infoText3"}>&nbsp;&nbsp;&nbsp;3 projects ongoing &nbsp;&nbsp;&nbsp;
+                            + 24 SP when achieved</div>
+                        <button className={"blueButton"} style={{width:60, height:40}}>Tasks</button>
+                    </div>
+                    <div className={"unlockBlock"}>
+                        <button className={"pointsButtons"} style={{width:120, height:40}}>Projects</button>
+                        <div className={"infoText3"}>&nbsp;&nbsp;&nbsp;1 project ongoing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            + 24 SP when achieved</div>
+                        <button className={"blueButton"} style={{width:60, height:40}}>New</button>
                     </div>
                 </div>
         );

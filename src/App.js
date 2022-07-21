@@ -61,7 +61,6 @@ class App extends Component {
                         <ProjectHeader />
                     </div>
                     <ProjectInfo />
-                    <ProjectGov />
                 </div>
             );
         } else if (props.page === "USER_DETAIL") {

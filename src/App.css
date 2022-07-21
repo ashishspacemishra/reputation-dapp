@@ -134,6 +134,8 @@
   height: 120px;
   box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .projectGovText {
@@ -181,6 +183,7 @@
   line-height: 15px;
   text-align: left;
   color: #3A3C40;
+  padding-top: 2px;
 
 }
 
@@ -191,7 +194,7 @@
   border-radius: 4px;
   border-width: 0px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
 }
 
@@ -284,6 +287,68 @@
   padding-top: 10px;
 }
 
+.infoText3 {
+  width: 157px;
+  height: 23px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #3A3C40;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.infoText4 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #3A3C40;
+  padding-bottom: 30px;
+}
+
+.infoText5 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #82868C;
+}
+
+.infoText6 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  justify-content: left;
+  color: #3A3C40;
+}
+
+.infoText7 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #61A9FF;
+}
+
+.infoText8 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #61A9FF;
+  padding-top: 5px;
+}
+
 .strengthPointsText {
   font-family: 'Montserrat';
   font-style: normal;
@@ -354,14 +419,37 @@
 }
 
 .unlockBlock {
-  width: 350px;
-  height: 86px;
+  width: 320px;
+  height: 50px;
   background: #FFFFFF;
   box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
   border-radius: 5px;
-  display: flex;
   margin-top: 10px;
   margin-bottom: 30px;
-  padding: 10px;
+  display: flex;
+  padding: 15px;
   justify-content: center;
+}
+
+.unlockBlock2 {
+}
+
+.blueButton {
+  height: 39px;
+  background: #2940D3;
+  color: #FFFFFF;
+  border-radius: 4px;
+  border-width: 0px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.levelDetails {
+  width: 1117px;
+  height: 222px;
+  box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
