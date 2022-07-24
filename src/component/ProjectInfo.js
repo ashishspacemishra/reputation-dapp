@@ -5,7 +5,7 @@ import Line2 from "../assets/Line2.svg";
 import ProjectGov from "./ProjectGov";
 import React from "react";
 
-const ProjectInfo = () => {
+const ProjectInfo = ({userInfo}) => {
 
     const OurProjects = () => {
         return (
@@ -50,7 +50,7 @@ const ProjectInfo = () => {
             <OurProjects />
             <OngoingProjects />
         </div>
-            <ProjectGov />
+            <ProjectGov userInfo={userInfo}/>
         </div>
     );
 }

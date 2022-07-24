@@ -7,7 +7,7 @@ import React from "react";
 import progress from "../assets/progress.svg";
 import  { useNavigate } from "react-router-dom";
 
-const ProjectGov = () => {
+const ProjectGov = ({userInfo}) => {
 
     let navigate = useNavigate();
 
@@ -31,7 +31,7 @@ const ProjectGov = () => {
                         <div className={"pointsSText"}>up to 10 points / months</div>
                     </div>
                     <div style={{paddingRight:20, paddingLeft:20}}>
-                        <button className={"pointsButtons"} style={{width:170}}>Achievements</button>
+                        <button className={"pointsButtons"} style={{width:180}}>Achievements</button>
                         <div className={"pointsSText"}>Complete bounties and gain  points</div>
                     </div>
                     <div>
@@ -45,11 +45,13 @@ const ProjectGov = () => {
     }
 
     const Achievements = () => {
+        const level = userInfo.level;
+        const nftImage = "NFT" + level + ".svg";
         return (
             <div className={"achievements"} >
                 <div style={{display:"flex", justifyContent:"center"}}>
                     <div style={{paddingRight:50, paddingTop:10}}>
-                        <img src={profileImage1} style={{height:80, width:80}}/>
+                        <img src={userInfo.userImage} style={{height:80, width:80}}/>
                     </div>
                     <div style={{paddingRight:50, paddingTop:30}}>
                         <button className={"blueButton"} style={{width:120, height:40}} onClick={(e) => navigateFunc(e, "/userDetail")}>
@@ -70,15 +72,15 @@ const ProjectGov = () => {
                     </div>
                     <div>
                         <div className={"infoText5"} style={{paddingBottom:5}}>Member</div>
-                        <div><img src={level2Image} style={{height:70, width:70}}/></div>
+                        <div><img src={nftImage} style={{height:70, width:70}}/></div>
                     </div>
                 </div>
                 <div style={{paddingTop:10, justifyContent:"center"}}>
-                    <div style={{display:"flex", fontSize:16, fontWeight:700}}>
-                        <div style={{textAlign:"left", paddingRight:190, paddingLeft:35}}>Level 2</div>
-                        <div style={{textAlign:"right", color: "#FBAA0E"}}>Level 3</div>
+                    <div style={{display:"flex", fontSize:14, fontWeight:600}}>
+                        <div style={{textAlign:"left", paddingRight:200, paddingLeft:30}}>Level {level}</div>
+                        <div style={{textAlign:"right", color: "#FBAA0E"}}>Level {level + 1}</div>
                     </div>
-                    <div><img src={progress} style={{width:300, paddingLeft:10}}/></div>
+                    <div><img src={progress} style={{width:300, paddingTop:4}}/></div>
                 </div>
             </div>
         );
@@ -89,18 +91,18 @@ const ProjectGov = () => {
             <div className={"levelDetails"} >
                 <div style={{display:"flex", justifyContent:"center", paddingTop:20}}>
                     <LevelBox levelNo={1} opa={1} />
-                    <LevelBox levelNo={2} opa={1} />
-                    <LevelBox levelNo={3} opa={0.5} />
-                    <LevelBox levelNo={4} opa={0.5} />
+                    <LevelBox levelNo={2} opa={userInfo.level >= 1 ? 1 : 0.5} />
+                    <LevelBox levelNo={3} opa={userInfo.level >= 2 ? 1 : 0.5} />
+                    <LevelBox levelNo={4} opa={userInfo.level >= 3 ? 1 : 0.5} />
                 </div>
                 <div>
                     <img src={Line3}/>
                 </div>
                 <div style={{display:"flex", justifyContent:"center"}}>
                     <LevelText taskName={"New member"} taskDetail={"Participate to bounty and taking"} opa={1}/>
-                    <LevelText taskName={"Member"} taskDetail={"Participate and create projects"} opa={1}/>
-                    <LevelText taskName={"Veteran"} taskDetail={"Treasury voting rights"} opa={0.5}/>
-                    <LevelText taskName={"Advisor"} taskDetail={"Admin rights"} opa={0.5}/>
+                    <LevelText taskName={"Member"} taskDetail={"Participate and create projects"} opa={userInfo.level >= 1 ? 1 : 0.5}/>
+                    <LevelText taskName={"Veteran"} taskDetail={"Treasury voting rights"} opa={userInfo.level >= 2 ? 1 : 0.5}/>
+                    <LevelText taskName={"Advisor"} taskDetail={"Admin rights"} opa={userInfo.level >= 3 ? 1 : 0.5}/>
                 </div>
             </div>
         );
@@ -118,8 +120,8 @@ const ProjectGov = () => {
 
     const LevelText = ({taskName, taskDetail, opa}) => {
         return (
-            <div className={"activeLevelBox"} style={{opacity:opa, padding:"10px 70px"}}>
-                <div style={{width:120}}>
+            <div className={"activeLevelBox"} style={{opacity:opa, padding:"10px 50px"}}>
+                <div style={{width:150}}>
                     <div className={"levelTaskInfo"} style={{fontWeight:700}}>{taskName}</div>
                     <div className={"levelTaskInfo"}>{taskDetail}</div>
                 </div>

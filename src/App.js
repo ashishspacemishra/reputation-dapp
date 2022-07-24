@@ -4,8 +4,8 @@ import LoginBar from "./component/LoginBar";
 import Sidebar from "./component/Sidebar";
 import ProjectHeader from "./component/ProjectHeader";
 import ProjectInfo from "./component/ProjectInfo";
-import ProjectGov from "./component/ProjectGov";
 import UserProfile from "./component/UserProfile";
+import myData from "./data/userInfo.json";
 
 class App extends Component {
 
@@ -52,25 +52,28 @@ class App extends Component {
         }
     }
 
-    renderPage = (props) => {
+    renderPage = (props, accountAddress) => {
+        const userDetails = myData.find(user => {
+            return user.userId.toLowerCase() === accountAddress.toLowerCase();
+        });
         if (props.page === "HOME") {
             return (
                 <div>
-                    <Sidebar/>
+                    <Sidebar userInfo={userDetails}/>
                     <div style={{paddingTop:100}}>
                         <ProjectHeader />
                     </div>
-                    <ProjectInfo />
+                    <ProjectInfo userInfo={userDetails}/>
                 </div>
             );
         } else if (props.page === "USER_DETAIL") {
             return (
                 <div>
-                    <Sidebar/>
+                    <Sidebar userInfo={userDetails}/>
                     <div style={{paddingTop:100}}>
                         <ProjectHeader />
                     </div>
-                    <UserProfile />
+                    <UserProfile userInfo={userDetails}/>
                 </div>
             );
         }
@@ -95,7 +98,7 @@ class App extends Component {
             {/*    <ProjectGov />*/}
             {/*  </div>*/}
             {/*}*/}
-            {this.state.isUserLoggedIn && this.renderPage(this.props)}
+            {this.state.isUserLoggedIn && this.renderPage(this.props, this.state.accountAddress)}
         </div>
       );
     }

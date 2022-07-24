@@ -30,19 +30,19 @@ const LoginBar = ({ isUserLoggedIn, onLoginButtonClick, onLogoutButtonClick, dis
         // updateChainToPolygon(chainId);
         if (!isAuthenticated) {
             console.log("authenticate");
-            await authenticate({signingMessage: "Log into Lomads Dapp" })
+            await authenticate({signingMessage: "Log into Dapp" })
                 .then(function (user) {
                     console.log("logged in user:", user);
                     console.log(user.get("ethAddress"));
                     console.log(account);
-                    onLoginButtonClick(account);
+                    onLoginButtonClick(user.get("ethAddress"));
                 })
                 .catch(function (error) {
                     console.log(error);
                 });
         } else {
             console.log("already authenticated");
-            onLoginButtonClick(account);
+            onLoginButtonClick(user.get("ethAddress"));
         }
     }
 

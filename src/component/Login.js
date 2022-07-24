@@ -25,7 +25,7 @@ const Login = ({ isUserLoggedIn, LoginMetamask, updateChainToPolygon}) => {
         updateChainToPolygon(chainId);
         if (!isAuthenticated) {
             console.log("authenticate");
-            await authenticate({signingMessage: "Log into Lomads Dapp" })
+            await authenticate({signingMessage: "Log into Dapp" })
                 .then(function (user) {
                     console.log("logged in user:", user);
                     console.log(user.get("ethAddress"));
