@@ -465,7 +465,6 @@
   box-shadow: 3px 5px 4px rgba(27, 43, 65, 0.05), -3px -3px 8px rgba(201, 75, 50, 0.1);
   border-radius: 5px;
   margin-top: 30px;
-  margin-bottom: 50px;
 }
 
 .profileNameSidebar {
@@ -486,4 +485,16 @@
   justify-content: left;
   align-items: start;
   color: #121212;
+}
+
+.textMostActive {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #3A3C40;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 50px;
 }

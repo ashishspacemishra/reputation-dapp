@@ -1,6 +1,6 @@
-import level2Image from "../assets/level2Image.svg";
 import Line3 from "../assets/Line3.svg";
-import profileImage1 from "../assets/profileImage1.svg";
+import level1 from "../assets/level1.svg";
+import level3 from "../assets/level3.svg";
 import teamIcon from "../assets/teamIcon.svg";
 import serviceIcon from "../assets/serviceIcon.svg";
 import React from "react";
@@ -129,6 +129,26 @@ const ProjectGov = ({userInfo}) => {
         );
     }
 
+    const MostActive = () => {
+        return (
+            <div>
+                <div className={"projectGovText"} style={{padding:0, paddingTop:20}}>
+                    Most active members this week
+                </div>
+                <div className={"levelDetails"} style={{height:80, marginTop:10}}>
+                    <div style={{display:"flex", justifyContent:"center", paddingTop:20}}>
+                        <div className={"textMostActive"}>+3 levels</div>
+                        <div><img src={level3} /></div>
+                        <div className={"textMostActive"}>+2 levels</div>
+                        <div><img src={level1} /></div>
+                        <div className={"textMostActive"} style={{paddingLeft:100}}>+1 level</div>
+                        <div><img src={level1} /></div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div>
             <div className={"projectGovText"}>
@@ -140,6 +160,9 @@ const ProjectGov = ({userInfo}) => {
             </div>
             <div id="projectInfo" className={"projectInfoCN"} style={{marginTop:10}}>
                 <LevelDetails />
+            </div>
+            <div id="projectInfo" className={"projectInfoCN"} style={{marginTop:10, marginBottom:50}}>
+                <MostActive />
             </div>
         </div>
     );
