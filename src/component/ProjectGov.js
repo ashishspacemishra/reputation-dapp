@@ -1,6 +1,6 @@
 import Line3 from "../assets/Line3.svg";
-import level1 from "../assets/level1.svg";
-import level3 from "../assets/level3.svg";
+import level1 from "../assets/mostActive23.png";
+import level3 from "../assets/mostActive1.png";
 import teamIcon from "../assets/teamIcon.svg";
 import serviceIcon from "../assets/serviceIcon.svg";
 import React from "react";
@@ -46,7 +46,7 @@ const ProjectGov = ({userInfo}) => {
 
     const Achievements = () => {
         const level = userInfo.level;
-        const nftImage = "NFT" + level + ".svg";
+        const nftImage = "NFT" + level + (level === 0 ? ".png" : ".svg");
         return (
             <div className={"achievements"} >
                 <div style={{display:"flex", justifyContent:"center"}}>
